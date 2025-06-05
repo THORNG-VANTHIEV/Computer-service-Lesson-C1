@@ -1,0 +1,93 @@
+# មេរៀនទី៤៖ ចម្លងទិន្នន័យ និងរៀបចំនីតិវិធីការចម្លងដោយស្វ័យប្រវត្តិ
+
+## គោលបំណងមេរៀន
+- យល់ពីរបៀបចម្លងទិន្នន័យដោយស្វ័យប្រវត្តិនៅលើ Windows។
+- រៀនចម្លងទិន្នន័យពីកុំព្យូទ័រទៅ external devices ដូចជា external hard drive, USB flash drive, និង CD/DVD។
+- យល់ពីការចម្លងទិន្នន័យទៅ cloud storage តាមអ៊ីនធឺណិត។
+- អាចកំណត់នីតិវិធី backup ដោយស្វ័យប្រវត្តិ និងការពារទិន្នន័យពីការបាត់បង់។
+- ស្គាល់បញ្ហាដែលអាចកើតឡើង និងដំណោះស្រាយនៅពេលចម្លងទិន្នន័យ។
+
+## របៀបធ្វើ
+មេរៀននេះត្រូវបានរៀបចំសម្រាប់អ្នកចាប់ផ្តើមថ្មី ដោយប្រើភាសាសាមញ្ញ និងផ្តល់ឧទាហរណ៍ច្បាស់លាស់។ យើងនឹងពន្យល់ជាជំហានៗ ដោយផ្តល់បញ្ហា ដំណោះស្រាយ និងឧទាហរណ៍សម្រាប់គ្រប់ចំណុច។ មេរៀននឹងបញ្ចប់ជាមួយសំណួរពិនិត្យចំណេះដឹងចំនួន ៥ សំណួរ ដើម្បីជួយអ្នករំលឹកអ្វីដែលបានរៀន។
+
+## មាតិកា
+
+### ១. របៀបចម្លងទិន្នន័យកុំព្យូទ័រផ្ទាល់ខ្លួនដោយស្វ័យប្រវត្តិ (Backup on Windows)
+ការធ្វើ backup ដោយស្វ័យប្រវត្តិនៅលើ Windows ជួយសន្សំសំចៃពេលវេលា និងក sureថាទិន្នន័យត្រូវបានរក្សាទុកជាប្រចាំ។  
+
+- **ប្រើ File History នៅលើ Windows**: File History ជួយ backup ទិន្នន័យដោយស្វ័យប្រវត្តិ។  
+  - **ជំហាន**:  
+    1. ភ្ជាប់ external hard drive ឬ USB flash drive ទៅ computer។  
+    2. ចូលទៅ Control Panel > System and Security > File History។  
+    3. ចុច “Turn on” និងជ្រើសរើស drive ដែលចង់ backup។  
+    4. កំណត់ folders ដែលចង់ backup និងកាលវិភាគ (ឧ. រៀងរាល់សប្តាហ៍)។  
+  - **បញ្ហា**: បើ external drive ផಸ្បែក ឬ USB ផ្តាច់ចរន្ត ទិន្នន័យអាចបាត់បង់។  
+  - **ដំណោះស្រាយ**: តភ្ជាប់ external drive នៅពេល backup និងស្កេន drive ដោយ antivirus software។  
+  - **ឧទាហរណ៍**: អតិថិជនប្រើ File History ដើម្បី backup ឯកសារការងារទៅ external drive រៀងរាល់សប្តាហ៍។ Computer ខូច ប៉ុន្តែគេ restore ទិន្នន័យបាន។  
+
+### ២. របៀបចម្លងទិន្នន័យពីកុំព្យូទ័រទៅកាន់ឧបករណ៍ External
+External hard drives មានទំហំធំ សមស្របសម្រាប់ backup ទិន្នន័យច្រើន។  
+
+- **ជំហាន**:  
+  1. ភ្ជាប់ external hard drive ទៅ computer។  
+  2. បើក File Explorer និងជ្រើសរើស folders ឬ files ដែលចង់ចម្លង។  
+  3. ចុចខាងស្តាំ > Copy ឬ Ctrl+C។  
+  4. ចូលទៅ external drive នៅ File Explorer ហើយចុចខាងស្តាំ > Paste ឬ Ctrl+V។  
+  5. ចុច “Safely Remove Hardware” មុនដក external drive។  
+  - **បញ្ហា**: External drive អាចខូច ឬមាន virus។  
+  - **ដំណោះស្រាយ**: ស្កេន external drive ដោយ antivirus software និងរក្សាទុកនៅកន្លែងសុវត្ថិភាព។  
+  - **ឧទាហរណ៍**: អតិថិជនចម្លងរូបថត 10GB ទៅ external hard drive។ នៅពេល USB បាត់ គេនៅតែមានទិន្នន័យនៅ external drive។  
+
+### ៣. របៀបចម្លងទិន្នន័យពីកុំព្យូទ័រទៅកាន់ឧបករណ៍ USB Flash
+USB flash drives ងាយស្រួលយកតាមខ្លួន ប៉ុន្តែមានទំហំតូចជាង external hard drives។  
+
+- **ជំហាន**:  
+  1. ដោត USB flash drive ទៅ computer។  
+  2. បើក File Explorer និងជ្រើសរើស files ឬ folders។  
+  3. ចុចខាងស្តាំ > Copy ឬ Ctrl+C។  
+  4. ចូលទៅ USB drive នៅ File Explorer ហើយចុច Paste ឬ Ctrl+V។  
+  5. ចុច “Eject” មុនដក USB។  
+  - **បញ្ហា**: USB អាចបាត់ ឬខូចបើមិន “Eject” ត្រឹមត្រូវ។  
+  - **ដំណោះស្រាយ**: ចុច “Safely Remove Hardware” និងទុក USB នៅកន្លែងសុវត្ថិភាព។  
+  - **ឧទាហរណ៍**: អតិថិជនចម្លងឯកសារសាលាទៅ USB flash drive ហើយទុកនៅក្នុងថតជ័រ។  
+
+### ៤. របៀបចម្លងទិន្នន័យពីកុំព្យូទ័រទៅកាន់ឧបករណ៍ CD/DVD
+CD/DVD សមស្របសម្រាប់ backup ទិន្នន័យដែលមិនត្រូវការកែប្រែ។  
+
+- **ជំហាន**:  
+  1. ដាក់ blank CD ឬ DVD ទៅក្នុង CD/DVD drive។  
+  2. បើក File Explorer និងជ្រើសរើស files ឬ folders។  
+  3. ចុចខាងស្តាំ > Send to > CD/DVD drive។  
+  4. ចុច “Burn to disc” នៅលើ popup window និងជ្រើសរើស burning options (ឧ. File System: Mastered)។  
+  5. ចុច “Finish” បន្ទាប់ពី burning បញ្ចប់។  
+  - **បញ្ហា**: CD/DVD អាចកោស ឬខូចបើមិនរក្សាទុកល្អ។  
+  - **ដំណោះស្រាយ**: ទុក CD/DVD នៅក្នុងប្រអប់ ឬ sleeve ដើម្បីការពារកោស។  
+  - **ឧទាហរណ៍**: អតិថិជន burn រូបថតទៅ DVD ហើយទុកនៅក្នុងប្រអប់ CD/DVD ដើម្បីការពារកោស។  
+
+### ៥. របៀបចម្លងទិន្នន័យពីកុំព្យូទ័រទៅកាន់អ៊ីនធឺណិត
+Cloud storage ដូចជា Google Drive, Dropbox, ឬ OneDrive ជួយរក្សាទុកទិន្នន័យតាមអ៊ីនធឺណិត។  
+
+- **ជំហាន**:  
+  1. បង្កើត account នៅ Google Drive, Dropbox, ឬ OneDrive។  
+  2. ដំឡើង desktop app ឬបើក website របស់ cloud service។  
+  3. Upload files ឬ folders ដោយ drag and drop ឬប្រើ upload button។  
+  4. កំណត់ sync settings សម្រាប់ backup ដោយស្វ័យប្រវត្តិ។  
+  - **បញ្ហា**: អ៊ីនធឺណិតយឺត ឬ account ត្រូវ hack អាចប៉ះពាល់ដល់ទិន្នន័យ។  
+  - **ដំណោះស្រាយ**: ប្រើ password ខ្លាំង និងភ្ជាប់អ៊ីនធឺណិតលឿន។  
+  - **ឧទាហរណ៍**: អតិថិជន upload ឯកសារការងារទៅ Google Drive ដោយប្រើ password ខ្លាំង និង sync ដោយស្វ័យប្រវត្តិ។  
+
+## សំណួរសម្រាប់ពិនិត្យចំណេះដឹង
+1. **សំណួរ**: តើ File History នៅលើ Windows ជួយធ្វើអ្វី?  
+   **ចម្លើយ**: ជួយ backup ទិន្នន័យដោយស្វ័យប្រវត្តិទៅ external drive ឬ USB តាមកាលវិភាគ។  
+
+2. **សំណួរ**: តើហេតុអ្វីត្រូវចុច “Safely Remove Hardware” មុនដក USB ឬ external drive?  
+   **ចម្លើយ**: ដើម្បីការពារកុំឱ្យ files ខូច ឬទិន្នន័យបាត់បង់។  
+
+3. **សំណួរ**: តើអ្វីជាគុណសម្បត្តិនៃការ backup ទៅ cloud storage?  
+   **ចម្លើយ**: អាចចូលប្រើទិន្នន័យបានពីគ្រប់ទីកន្លែង និងមិនបាត់បើ device ខូច។  
+
+4. **សំណួរ**: តើត្រូវធ្វើអ្វីដើម្បីការពារ CD/DVD ពីការខូច?  
+   **ចម្លើយ**: ទុកនៅក្នុងប្រអប់ ឬ sleeve ដើម្បីការពារកោស។  
+
+5. **សំណួរ**: តើអ្វីជាដំណោះស្រាយបើ cloud storage account ត្រូវ hack?  
+   **ចម្លើយ**: ប្រើ password ខ្លាំង និង enable two-factor authentication។
