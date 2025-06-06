@@ -1,0 +1,171 @@
+# មេរៀនទី៨៖ កំណត់សមាសភាគមានបញ្ហា ឬផ្នែកផ្សេងៗ
+
+## គោលបំណងមេរៀន
+- យល់ពីរបៀបពិនិត្យកុំព្យូទ័រដើម្បីរកបញ្ហាទាក់ទងនឹងប្រព័ន្ធប្រតិបត្តិការ និង hardware។
+- រៀនស្កេនកុំព្យូទ័រដើម្បីរក malware និង spyware។
+- អាចសួរព័ត៌មានអំពីកំហុស និងបញ្ហាពីអតិថិជនបានច្បាស់លាស់។
+- ស្គាល់វិធីដោះស្រាយបញ្ហា malware និងការពារកុំព្យូទ័រ។
+- អាចកំណត់សមាសភាគខូច និងផ្តល់ដំណោះស្រាយសមស្រប។
+
+## របៀបធ្វើ
+មេរៀននេះត្រូវបានរៀបចំសម្រាប់អ្នកចាប់ផ្តើមថ្មី ដោយប្រើភាសាសាមញ្ញ និងផ្តល់ឧទាហរណ៍ច្បាស់លាស់។ យើងនឹងពន្យល់ជាជំហានៗ ដោយផ្តល់នូវអត្ថន័យ គោលបំណង របៀបធ្វើ បញ្ហា ដំណោះស្រាយ និងឧទាហរណ៍សម្រាប់គ្រប់ចំណុច។ មេរៀននឹងបញ្ចប់ជាមួយសំណួរពិនិត្យចំណេះដឹងចំនួន ៥ សំណួរ ដើម្បីជួយអ្នករំលឹកអ្វីដែលបានរៀន។
+
+## មាតិកា
+
+### ១. ពិនិត្យកុំព្យូទ័រសម្រាប់ប្រព័ន្ធប្រតិបត្តិការ
+**អត្ថន័យ**: ការពិនិត្យប្រព័ន្ធប្រតិបត្តិការ (operating system) គឺជាការត្រួតពិនិត្យ software ដែលគ្រប់គ្រងកុំព្យូទ័រ (ឧ. Windows, Linux) ដើម្បីរកបញ្ហាដែលធ្វើឱ្យកុំព្យូទ័រដំណើរការមិនប្រក្រតី។ បញ្ហាអាចរួមមាន corrupted system files, outdated drivers, ឬ configuration errors។  
+
+**គោលបំណង**: ដើម្បីកំណត់ និងជួសជុលបញ្ហា software ដែលប៉ះពាល់ដល់ performance ឬ functionality នៃកុំព្យូទ័រ។  
+
+- **របៀបធ្វើ**: 
+  - **ប្រើ Event Viewer**: Tool នៅលើ Windows ដែលបង្ហាញ logs នៃ system events។  
+    - **ជំហាន**:
+      1. បើក Event Viewer (ចុច Windows key + R, វាយ “eventvwr”, ចុច Enter)។
+      2. ចូលទៅ Windows Logs > System ឬ Application។
+      3. ស្វែងរក errors ឬ warnings (ឧ. error code 0x80070057) ដែលបង្ហាញពីបញ្ហា។
+    - **បញ្ហា**: Error messages អាចពិបាកយល់ ឬមានព័ត៌មានបច្ចេកទេស។  
+    - **ដំណោះស្រាយ**: ស្វែងរក error code នៅលើ Google ឬ Microsoft support website ដើម្បីយល់អត្ថន័យ និងដំណោះស្រាយ។  
+    - **ឧទាហរណ៍**: Event Viewer បង្ហាញ error code 0x80070057 ដែលបញ្ជាក់ថា system files ខូច។ អ្នកស្វែងរក និងរកឃើញថាត្រូវប្រើ System File Checker ដើម្បីជួសជុល។  
+  - **ប្រើ System File Checker (SFC)**: Tool ដែលស្កេន និងជួសជុល corrupted system files។  
+    - **ជំហាន**:
+      1. បើក Command Prompt ជា Administrator (ចុច Windows key, វាយ “cmd”, ចុចខាងស្តាំ > Run as Administrator)។
+      2. វាយ “sfc /scannow” ហើយចុច Enter។
+      3. រង់ចាំ scan បញ្ចប់ និងជួសជុល files ដែលខូច។
+    - **បញ្ហា**: បើ system files ខូចធ្ងន់ធ្ងរ អាចត្រូវការ reinstall OS។  
+    - **ដំណោះស្រាយ**: Backup ទិន្នន័យជាមុន ហើយប្រើ bootable USB ដើម្បី reinstall OS។  
+    - **ឧទាហរណ៍**: Computer របស់អតិថិជន crash ញឹកញាប់។ អ្នកប្រើ sfc /scannow ដើម្បីជួសជុល system files និងដោះស្រាយបញ្ហា។  
+
+**ហេតុអ្វីសំខាន់?**: បញ្ហា operating system អាចបណ្តាលឱ្យកុំព្យូទ័រយឺត ឬមិនបើក។ ការពិនិត្យជួយរកមូលហេតុ និងជួសជុលមុនពេលបញ្ហាធំឡើង។  
+
+### ២. ពិនិត្យកុំព្យូទ័ររកពពួក Malware
+**អត្ថន័យ**: Malware (malicious software) គឺជា software ដែលបង្កគ្រោះថ្នាក់ ដូចជា viruses, worms, ឬ ransomware ដែលអាចធ្វើឱ្យកុំព្យូទ័រយឺត លួចទិន្នន័យ ឬខូច system។ ការពិនិត្យរក malware គឺជាការស្កេនកុំព្យូទ័រដើម្បីរក និងលុប software ទាំងនេះ។  
+
+**គោលបំណង**: ការពារទិន្នន័យ និងធ្វើឱ្យកុំព្យូទ័រដំណើរការបានល្អ។  
+
+- **របៀបធ្វើ**: 
+  - **ប្រើ antivirus software**: Tools ដូចជា Windows Defender ឬ Malwarebytes ស្កេន និងលុប malware។  
+    - **ជំហាន**:
+      1. បើក Windows Defender (ចុច Windows key, វាយ “Windows Security”, ចុច Enter)។
+      2. ចូលទៅ Virus & Threat Protection > Scan Options។
+      3. ជ្រើសរើស Full Scan ហើយចុច Scan Now។
+    - **បញ្ហា**: Malware ខ្លះអាចលាក់ខ្លួន ឬបិទ antivirus software។  
+    - **ដំណោះស្រាយ**: Boot កុំព្យូទ័រនៅ Safe Mode (ចុច F8 ពេលចាប់ផ្តើម) ហើយស្កេនម្តងទៀត។  
+    - **ឧទាហរណ៍**: Computer របស់អតិថិជនបង្ហាញ pop-up ads ច្រើន។ អ្នកស្កេនជាមួយ Windows Defender នៅ Safe Mode និងលុប malware ដែលបណ្តាលឱ្យមាន ads។  
+
+**ហេតុអ្វីសំខាន់?**: Malware អាចលួចទិន្នន័យផ្ទាល់ខ្លួន ឬធ្វើឱ្យកុំព្យូទ័រខូច។ ការស្កេនជាប្រចាំជួយការពារកុំព្យូទ័រ។  
+
+### ៣. ពិនិត្យកុំព្យូទ័រសម្រាប់រកការខូចខាតផ្នែករឹង
+**អត្ថន័យ**: ការពិនិត្យ hardware គឺជាការត្រួតពិនិត្យផ្នែករូបវន្តនៃកុំព្យូទ័រ (ឧ. motherboard, RAM, hard drive) ដើម្បីរកសញ្ញាខូចខាត។ បញ្ហា hardware អាចបណ្តាលឱ្យកុំព្យូទ័រមិនបើក ឬ crash។  
+
+**គោលបំណង**: កំណត់ថាតើ hardware ណាមួយខូច និងត្រូវជួសជុល ឬជំនួស។  
+
+- **របៀបធ្វើ**: 
+  - **ពិនិត្យ hardware ដោយភ្នែក**: ស្វែងរកសញ្ញាខូចខាតដែលមើលឃើញ។  
+    - **ជំហាន**:
+      1. បិទ computer និងដកខ្សែភ្លើង។
+      2. បើក computer case ដោយប្រើ screwdriver។
+      3. ពិនិត្យ components ដូចជា RAM, hard drive, power supply សម្រាប់សញ្ញាខូច (ឧ. capacitors ហើម, burn marks, loose connections)។
+    - **បញ្ហា**: Static electricity អាចធ្វើឱ្យ components ខូចបន្ថែម។  
+    - **ដំណោះស្រាយ**: ពាក់ antistatic wrist strap មុនប៉ះ hardware។  
+    - **ឧទាហរណ៍**: អ្នករកឃើញ capacitor ហើមនៅលើ motherboard។ អ្នកណែនាំអតិថិជនឲ្យជំនួស motherboard ព្រោះការជួសជុលមិនសន្សំសំចៃ។  
+  - **ប្រើ diagnostic tools**: Software ដូចជា MemTest86 ឬ CrystalDiskInfo។  
+    - **ជំហាន**:
+      1. បង្កើត bootable USB ជាមួយ MemTest86 ដើម្បីត្រួតពិនិត្យ RAM។
+      2. ដំឡើង CrystalDiskInfo ដើម្បីពិនិត្យ health នៃ hard drive។
+    - **បញ្ហា**: Diagnostic results អាចពិបាកបកស្រាយ។  
+    - **ដំណោះស្រាយ**: អាន user manual ឬស្វែងរក results នៅលើអ៊ីនធឺណិត (ឧ. “MemTest86 errors”)។  
+    - **ឧទាហរណ៍**: CrystalDiskInfo បង្ហាញ hard drive មាន bad sectors។ អ្នក backup ទិន្នន័យ និងណែនាំអតិថិជនឲ្យជំនួស hard drive ជាមួយ SSD។  
+
+**ហេតុអ្វីសំខាន់?**: Hardware ខូចអាចបណ្តាលឱ្យកុំព្យូទ័រមិនដំណើរការ។ ការពិនិត្យជួយកំណត់ components ដែលត្រូវជំនួស។  
+
+### ៤. សួរព័ត៌មានអំពីកំហុស និងបញ្ហា
+**អត្ថន័យ**: ការសួរព័ត៌មានអំពីកំហុស គឺជាការសន្ទនាជាមួយអតិថិជនដើម្បីស្វែងយល់អំពី symptoms នៃបញ្ហា និងហេតុការណ៍ដែលនាំឱ្យមានបញ្ហា។  
+
+**គោលបំណង**: ប្រមូលព័ត៌មានដើម្បីកំណត់បញ្ហាបានលឿន និងត្រឹមត្រូវ។  
+
+- **របៀបធ្វើ**: 
+  - **សួរសំណួរជាក់លាក់**: សួរអំពី symptoms និង context។  
+    - **ជំហាន**:
+      1. សួរអតិថិជនថា “តើ computer មានបញ្ហាអ្វី?” (ឧ. យឺត, crash, error messages)។
+      2. សួរពីហេតុការណ៍ (ឧ. “តើបញ្ហាកើតឡើងនៅពេលណា? បន្ទាប់ពី install software ថ្មីទេ?”)។
+      3. កត់ត្រាព័ត៌មាននៅ checklist ដើម្បីតាមដាន។
+    - **បញ្ហា**: អតិថិជនអាចផ្តល់ព័ត៌មានមិនច្បាស់ (ឧ. “computer ខូច”)។  
+    - **ដំណោះស្រាយ**: សួរសំណួរជាក់លាក់ (ឧ. “តើអ្នកឃើញ error message ទេ? តើ computer បើកមិនបានទេ?”)។  
+    - **ឧទាហរណ៍**: អតិថិជនប្រាប់ថា computer យឺត។ អ្នកសួរថា “តើយឺតនៅពេលបើក programs ឬពេល boot?” ហើយរកឃើញថា RAM មិនគ្រប់គ្រាន់។  
+
+**ហេតុអ្វីសំខាន់?**: ព័ត៌មានពីអតិថិជនជួយបង្រួមលទ្ធភាពនៃបញ្ហា និងសន្សំសំចៃពេលវេលាក្នុងការធ្វើរោគវិនិច្ឆ័យ។  
+
+### ៥. ស្កែនកុំព្យូទ័រ របស់អ្នកសម្រាប់ស្វែងរកមេរោគ
+**អត្ថន័យ**: ការស្កេនរក virus គឺជាការប្រើ antivirus software ដើម្បីរក និងលុប malicious programs ដែលអាចបំផ្លាញ files ឬធ្វើឱ្យកុំព្យូទ័រដំណើរការមិនប្រក្រតី។  
+
+**គោលបំណង**: ការពារទិន្នន័យ និងធ្វើឱ្យកុំព្យូទ័រដំណើរការបានល្អ។  
+
+- **របៀបធ្វើ**: 
+  - **ប្រើ antivirus software**: Tools ដូចជា Windows Defender ឬ Avast។  
+    - **ជំហាន**:
+      1. បើក Windows Defender (ចុច Windows key, វាយ “Windows Security”, ចុច Enter)។
+      2. ចូលទៅ Virus & Threat Protection ហើយជ្រើសរើស Full Scan។
+      3. Quarantine ឬ delete viruses ដែលរកឃើញ។
+    - **បញ្ហា**: Virus ខ្លះអាចទប់ស្កាត់ antivirus software។  
+    - **ដំណោះស្រាយ**: ប្រើ bootable antivirus USB (ឧ. Kaspersky Rescue Disk) ដើម្បីស្កេនមុនចាប់ផ្តើម OS។  
+    - **ឧទាហរណ៍**: Windows Defender រកឃើញ virus នៅ external drive។ អ្នក quarantine virus និងសម្អាត drive មុនប្រើ។  
+
+**ហេតុអ្វីសំខាន់?**: Virus អាចលុប files ឬធ្វើឱ្យ system ខូច។ ការស្កេនជាប្រចាំជួយរក និងលុប virus មុនពេលបណ្តាលឱ្យខូចខាតធ្ងន់ធ្ងរ។  
+
+### ៦. ស្កែនកុំព្យូទ័រ របស់អ្នកសម្រាប់មេរោគប្រភេទ Spyware
+**អត្ថន័យ**: Spyware គឺជា malware ដែលលួចទិន្នន័យផ្ទាល់ខ្លួន (ឧ. passwords, browsing history) ឬធ្វើឱ្យកុំព្យូទ័រយឺត។ ការស្កេនរក spyware គឺជាការប្រើ software ដើម្បីរក និងលុប spyware។  
+
+**គោលបំណង**: ការពារឯកជនភាព និងធ្វើឱ្យកុំព្យូទ័រដំណើរការលឿន។  
+
+- **របៀបធ្វើ**: 
+  - **ប្រើ anti-spyware software**: Tools ដូចជា Malwarebytes ឬ Spybot។  
+    - **ជំហាន**:
+      1. ដំឡើង Malwarebytes និង update database។
+      2. ជ្រើសរើស Scan និងរង់ចាំ results។
+      3. Delete ឬ quarantine spyware ដែលរកឃើញ។
+    - **បញ្ហា**: Spyware អាចលាក់ខ្លួននៅក្នុង system files ឬ browser extensions�।  
+    - **ដំណោះស្រាយ**: ស្កេននៅ Safe Mode និងប្រើ anti-spyware ជាមួយ real-time protection។  
+    - **ឧទាហរណ៍**: Malwarebytes រកឃើញ spyware ដែលបណ្តាលឱ្យ browser redirect ទៅ unknown websites។ អ្នក delete spyware និងណែនាំអតិថិជនឲ្យប្រើ ad-blocker។  
+
+**ហេតុអ្វីសំខាន់?**: Spyware អាចលួចទិន្នន័យសំខាន់ ដូចជា bank account details។ ការស្កេនជួយការពារឯកជនភាព។  
+
+### ៧. អ្វីដែលអ្នកគួរធ្វើ ប្រសិនបើមានពពួក Malware
+**អត្ថន័យ**: នៅពេលរកឃើញ malware ត្រូវចាត់វិធានការដើម្បីលុបវា និងការពារកុំព្យូទ័រពីការឆ្លងឡើងវិញ។ នេះរួមបញ្ចូលការលុប malware និងការបង្កើតទម្លាប់សុវត្ថិភាព។  
+
+**គោលបំណង**: លុប malware និងការពារកុំព្យូទ័រពីការខូចខាតបន្ថែម។  
+
+- **របៀបធ្វើ**: 
+  - **Quarantine និង delete malware**: ប្រើ antivirus software ដើម្បីគ្រប់គ្រង malware។  
+    - **ជំហាន**:
+      1. Quarantine malware ដែលរកឃើញដោយ antivirus software។
+      2. Delete malware បន្ទាប់ពីប្រាកដថាវាមិនមែនជា legitimate file។
+      3. Restart computer និងស្កេនម្តងទៀតដើម្បីប្រាកដថាគ្មាន malware នៅសល់។
+    - **បញ្ហា**: Malware ខ្លះអាចត្រលប់មកវិញ ឬឆ្លងមកពី external devices។  
+    - **ដំណោះស្រាយ**: Update antivirus software និង disable internet អំឡុងការស្កេន។  
+    - **ឧទាហរណ៍**: Malwarebytes រកឃើញ ransomware។ អ្នក quarantine ransomware, backup ទិន្នន័យ និង reinstall OS ដើម្បីប្រាកដថាកុំព្យូទ័រស្អាត។  
+  - **ការពារកុំព្យូទ័រ**: ការពារកុំឡើងវិញ។  
+    - **ជំហាន**:
+      1. ដំឡើង antivirus software ជាមួយ real-time protection។
+      2. Update OS និង software ទៀងទាត់។
+      3. ប្រាប់អតិថិជនឲ្យជៀសវាង clicking suspicious links ឬ downloading files ពី unknown sources។
+    - **បញ្ហា**: អតិថិជនអាច download malware ដោយចៃដន្យ។  
+    - **ដំណោះស្រាយ**: បណ្តុះបណ្តាលអតិថិជនអំពី safe browsing habits និងប្រើ browser extensions ដូចជា uBlock Origin�।  
+    - **ឧទាហរណ៍**: អ្នកជួសជុលដំឡើង Avast និងប្រាប់អតិថិជនឲ្យជៀសវាង downloading software ពី websites មិនគួរទុកចិត្ត។  
+
+**ហេតុអ្វីសំខាន់?**: Malware អាចបំផ្លាញទិន្នន័យ ឬធ្វើឱ្យកុំព្យូទ័រមិនអាចប្រើបាន។ ការដោះស្រាយភ្លាមៗ និងការការពារជួយរក្សាសុវត្ថិភាព។  
+
+## សំណួរសម្រាប់ពិនិត្យចំណេះដឹង
+1. **សំណួរ**: តើ Event Viewer ជួយអ្វីក្នុងការពិនិត្យប្រព័ន្ធប្រតិបត្តិការ?  
+   **ចម្លើយ**: ជួយស្វែងរក errors ឬ warnings ដែលបង្ហាញពីបញ្ហា system ដូចជា corrupted files។  
+
+2. **សំណួរ**: តើហេតុអ្វីត្រូវស្កេនកុំព្យូទ័រនៅ Safe Mode ដើម្បីរក malware?  
+   **ចម្លើយ**: ព្រោះ malware ខ្លះអាចលាក់ខ្លួន ឬបិទ antivirus software នៅ normal mode។  
+
+3. **សំណួរ**: តើសញ្ញាអ្វីខ្លះបង្ហាញថា hardware ខូច?  
+   **ចម្លើយ**: Capacitors ហើម, burn marks, ឬ loose connections នៅលើ motherboard ឬ components ផ្សេងៗ។  
+
+4. **សំណួរ**: តើសំណួរអ្វីគួរសួរអតិថិជនដើម្បីកំណត់បញ្ហា?  
+   **ចម្លើយ**: “តើ computer មានបញ្ហាអ្វី?” និង “តើបញ្ហាកើតឡើងនៅពេលណា?”  
+
+5. **សំណួរ**: តើត្រូវធ្វើអ្វីបន្ទាប់ពីរកឃើញ malware?  
+   **ចម្លើយ**: Quarantine ឬ delete malware, restart computer, និងស្កេនម្តងទៀតដើម្បីប្រាកដថាស្អាត។
